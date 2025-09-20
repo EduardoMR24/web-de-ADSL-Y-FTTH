@@ -1,0 +1,328 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Paleta y tipografía ===== */
+:root {
+    --negro: #0a0a0f;
+    --azul: #1e3a8a;
+    --morado: #6d28d9;
+    --gris: #b8b8b8;
+    --blanco: #f5f5f5;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--negro);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+/* ===== Encabezado ===== */
+header {
+    background: linear-gradient(135deg, var(--azul), var(--morado));
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--negro);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+/* ===== Encabezado con imagen de fondo ===== */
+.header-con-imagen {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header-con-imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--blanco);
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    color: var(--gris);
+}
+
+/* ===== Navegación ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.activo {
+    color: var(--morado);
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--morado);
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===== Secciones de contenido ===== */
+.contenido {
+    max-width: 1000px;
+    margin: 60px auto;
+    background: #111122;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.contenido h2 {
+    margin-bottom: 20px;
+    color: var(--morado);
+    font-size: 2rem;
+}
+
+.contenido::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(109, 40, 217, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.contenido p, .contenido ul, .contenido ol {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Botones con imágenes y animación ===== */
+.botones-indice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.boton-grande {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    background: linear-gradient(135deg, var(--azul), var(--morado));
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.boton-grande img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.boton-grande span {
+    margin-top: 10px;
+}
+
+.boton-grande:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(109, 40, 217, 0.7);
+}
+
+/* ===== Estilos para autores ===== */
+.autores-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.autor-imagen {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.autor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.autor-info h3 {
+    color: var(--morado);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.autor-info p {
+    margin-bottom: 5px;
+    color: var(--gris);
+}
+
+/* ===== Estilos para conclusiones ===== */
+.conclusiones-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.conclusion-autor {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid var(--morado);
+}
+
+.numero-autor {
+    color: var(--morado);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.conclusion-texto {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111122;
+    color: var(--gris);
+    font-size: 0.9rem;
+    border-top: 2px solid var(--morado);
+}
+
+/* ===== Elementos gráficos ===== */
+.decoracion {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--azul), var(--morado));
+    margin: 40px 0;
+    border-radius: 3px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .botones-indice {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .boton-grande {
+        width: 100%;
+        max-width: 250px;
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .boton-grande img {
+        margin-bottom: 0;
+        margin-right: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .autor {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-con-imagen {
+        height: 250px;
+    }
+    
+    .overlay h1 {
+        font-size: 2.2rem;
+    }
+    
+    .overlay p {
+        font-size: 1.2rem;
+    }
+}

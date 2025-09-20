@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSL - Conectividad</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para la imagen de fondo con título */
+        .header-con-imagen {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('ASDLimage2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .titulo-contenido {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            max-width: 800px;
+        }
+        
+        .titulo-contenido h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--blanco);
+        }
+        
+        .titulo-contenido p {
+            font-size: 1.5rem;
+            color: var(--gris);
+        }
+        
+        /* Estilos para el contenido */
+        .contenido-principal {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #111122;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+        }
+        
+        .contenido-principal h2 {
+            color: var(--morado);
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 2px solid var(--morado);
+            padding-bottom: 10px;
+        }
+        
+        .contenido-principal h3 {
+            color: var(--azul);
+            margin: 25px 0 15px;
+            font-size: 1.6rem;
+        }
+        
+        .contenido-principal p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .contenido-principal ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .contenido-principal li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .numero-lista {
+            font-weight: bold;
+            color: var(--morado);
+            margin-right: 8px;
+        }
+        
+        .destacado {
+            background: rgba(109, 40, 217, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--morado);
+            margin: 25px 0;
+        }
+        
+        .destacado h4 {
+            color: var(--morado);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .header-con-imagen {
+                height: 300px;
+            }
+            
+            .titulo-contenido h1 {
+                font-size: 2.5rem;
+            }
+            
+            .titulo-contenido p {
+                font-size: 1.2rem;
+            }
+            
+            .contenido-principal {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-con-imagen">
+        <div class="titulo-contenido">
+            <h1>ADSL Technology</h1>
+            <p>Asymmetric Digital Subscriber Line</p>
+        </div>
+    </header>
+
+    <section class="contenido-principal">
+        <h2>ADSL (Asymmetric Digital Subscriber Line)</h2>
+        
+        <p>Asynchronous Digital Subscriber Line (ADSL) refers to the use of telephone lines to access the Internet with the requirement of a dedicated modem. This technology utilizes a pair of copper wires for the transmission of high-frequency signals, leveraging existing telephone infrastructure while meeting specific requirements for signal transport.</p>
+        
+        <div class="destacado">
+            <h4>Key Requirements for ADSL Operation:</h4>
+            <ul>
+                <li><span class="numero-lista">•</span> Maximum extension range not greater than 5.5 kilometers from the telephone exchange where transmission occurs</li>
+                <li><span class="numero-lista">•</span> No interference from other services transmitted over the same medium/cable, which could cause signal degradation</li>
+            </ul>
+        </div>
+        
+        <p>The defining characteristic of ADSL, and what gives it its name, is its asymmetric nature, meaning that the download speed (from the Internet to the user) is significantly higher than the upload speed (from the user to the Internet). This design reflects typical Internet usage patterns (browsing, video consumption, file downloading) that require more bandwidth in the download direction than in the upload direction.</p>
+        
+        <h3>Key Principles of ADSL Technology</h3>
+        
+        <h4>1. Use of Existing Copper Pair Infrastructure</h4>
+        <p>The significant advantage of ADSL was that it did not require new wiring infrastructure, leveraging the telephone wires that were already reaching almost every home.</p>
+        
+        <h4>2. Frequency Division Multiplexing (FDM)</h4>
+        <p>This is the fundamental principle of ADSL operation. The copper line has a wide spectrum of frequencies (bandwidth) that is not used for voice transmission. For standard Telephone Service (POTS), the frequency range of 0 to 4 kHz is reserved for conventional telephone calls. ADSL utilizes the frequencies above 4 kHz, which are normally unused, to transmit data.</p>
+        
+        <p>FDM assigns specific "lanes" within this high-frequency spectrum for different functions:</p>
+        <ul>
+            <li><span class="numero-lista">•</span> A dedicated channel for upload: From the user to the network</li>
+            <li><span class="numero-lista">•</span> A dedicated channel for download: From the network to the user</li>
+        </ul>
+        
+        <p>Some implementations use an Echo Cancellation (EC) scheme, which allows overlapping of upstream and downstream channels. The modem "cancels" its own transmitted signal to listen only to the signal it receives.</p>
+        
+        <h4>3. Simultaneous Signal Transfer</h4>
+        <p>ADSL enables simultaneous voice and data transmission over the same copper pair without interference between services.</p>
+        
+        <h4>4. Asymmetry</h4>
+        <p>The download capacity (to the user) is much greater than the upload capacity (from the user). This design reflects typical Internet usage patterns that consume more bandwidth in the download direction.</p>
+        
+        <h4>5. Modulation (DMT - Discrete Multitone Modulation)</h4>
+        <p>The most common modulation technique used in ADSL is Discrete Multitone Modulation (DMT). This method divides the frequency spectrum into 256 subchannels or 'tones'. Each subchannel operates independently and continuously adapts to line quality conditions. This allows for optimization of transmission speed and compensation for interference (noise) in the cable.</p>
+        
+        <h4>6. Error Coding and Correction</h4>
+        <p>Copper lines are prone to noise and interference. To ensure data integrity, ADSL employs sophisticated techniques:</p>
+        <ul>
+            <li><span class="numero-lista">•</span> <strong>Interleaving:</strong> Data packets are "mixed" before transmission. If brief interference corrupts a series of consecutive bits, the "deinterleaving" process at the receiver distributes the damaged bits among many different packets, allowing correction algorithms to repair them more effectively.</li>
+            <li><span class="numero-lista">•</span> <strong>Forward Error Correction (FEC):</strong> Adds extra correction bits to detect and repair errors without requiring retransmission of information, at the cost of slightly increased latency.</li>
+        </ul>
+        
+        <h3>Essential Components for ADSL Installation</h3>
+        
+        <h4>1. Splitter (or ADSL Filter)</h4>
+        <p>This is a passive device (does not require power) that acts as a frequency discriminator. It is installed at the entry point of the telephone line into the home. Its function is to separate the low-frequency analog signal (voice) and direct it to telephones or fax machines, while simultaneously filtering and directing the high-frequency signals (data) to the ADSL modem/router. Proper installation is crucial to avoid noise, distortion in voice calls, and loss of stability in the Internet connection.</p>
+        
+        <h4>2. ADSL Router/Modem</h4>
+        <p>The modem is the active device that connects to the line after the splitter. Its function is to demodulate the high-frequency analog signal that arrives through the line, converting it into digital data packets understandable by computers and network devices. The router component directs Internet traffic between the home local network (via Ethernet cable or Wi-Fi) and the provider's network.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Business Connectivity | Academic Project</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSL y FTTH - Conectividad</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para los botones tipo app */
+        .botones-indice {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .boton-app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: var(--blanco);
+            padding: 25px 20px;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(109, 40, 217, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .boton-app::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(109, 40, 217, 0.1), rgba(30, 58, 138, 0.1));
+            z-index: 0;
+        }
+        
+        .boton-app img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .boton-app span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .boton-app:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(109, 40, 217, 0.4);
+        }
+        
+        .boton-app:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Efecto de iluminación al pasar el mouse */
+        .boton-app::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            transform: rotate(30deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+        
+        .boton-app:hover::after {
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .botones-indice {
+                grid-template-columns: 1fr;
+            }
+            
+            .boton-app {
+                padding: 20px 15px;
+            }
+            
+            .boton-app img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>operating principles of ADSL and FTTH</h1>
+    </header>
+
+    <section class="contenido">
+        <h2>WELCOME!</h2>
+        <p>
+            The following page will provide information on the operating principles of ADSL and FTTH.
+            <strong>ADSL</strong> y <strong>FTTH</strong>.  
+            yipiiiie
+        </p>
+
+        <div class="indice">
+            <h3>Explore our sections</h3>
+            <div class="botones-indice">
+                <a href="ADSL.html" class="boton-app">
+                    <img src="ADSLimage.jpg" alt="ADSL">
+                    <span>Information about ADSL</span>
+                </a>
+                <a href="FTTH.html" class="boton-app">
+                    <img src="FTTHimage.jpg" alt="FTTH">
+                    <span>Information about FTTH</span>
+                </a>
+                <a href="conclusiones.html" class="boton-app">
+                    <img src="CONCLUSIONimage.jpg" alt="Conclusiones">
+                    <span>Conclusions</span>
+                </a>
+                <a href="fuentes.html" class="boton-app">
+                    <img src="REFERENCIASimage.jpg" alt="Fuentes">
+                    <span>Bibliographic sources</span>
+                </a>
+              
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Business Connectivity | Academic Project</p>
+    </footer>
+</body>
+</html>
